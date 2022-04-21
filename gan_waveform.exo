@@ -1,0 +1,51 @@
+  use input rec wiregain v-wiregain cluster apdsignalfinder gridcorr lifecalib apdposcorr weighted-apd toutput
+  /input/file /nfs/slac/g/exo_data8/exo_data/users/shaolei/gan_root/phase1/MPD-NoPooling/temp_full_6230-002_real.root
+  /rec/LowerFitBoundWire 40
+  /rec/UpperFitBoundWire 140
+  /rec/ElectronicsDBFlavor timevartau
+  /rec/enable_stage multiple_sig_finder true
+  /rec/matched_filter_finder/APDSumThresholdFactor 5
+  /rec/matched_filter_finder/APDSmoothWindow 4
+  /rec/LowerFitBoundWireRestr 20
+  /rec/UpperFitBoundWireRestr 30
+  /rec/matched_filter_finder/DivideNoise false
+  /rec/matched_filter_finder/UserVWireThreshold -1.0
+  /rec/matched_filter_finder/VWireThresholdFactor 5.0
+  /rec/collection_drift_velocity_mm_per_ns 0.00174
+  /rec/drift_velocity_mm_per_ns 0.00171
+  /rec/show_stage_status
+  
+  /rec/u_and_apd_fitter/verbose/outputtext apd false
+  /rec/u_and_apd_fitter/verbose/outputtext u-wire false
+  /rec/u_and_apd_fitter/verbose/outputtext v-wire false
+  /rec/u_and_apd_fitter/verbose/outputtext induction false
+  
+  /rec/u_and_apd_fitter/verbose/plot apd false
+  /rec/u_and_apd_fitter/verbose/plot u-wire false
+  /rec/u_and_apd_fitter/verbose/plot v-wire false
+  /rec/u_and_apd_fitter/verbose/plot induction false
+
+  /rec/u_and_apd_fitter/verbose/plottofile apd false
+  /rec/u_and_apd_fitter/verbose/plottofile u-wire false
+  /rec/u_and_apd_fitter/verbose/plottofile v-wire false
+  /rec/u_and_apd_fitter/verbose/plottofile induction false
+
+  /wiregain/UWireDBFlavor pp_sourcecal_ci_timevar_2a
+  /v-wiregain/VWireDBFlavor vanilla
+  /cluster/drift_velocity_mm_per_ns 0.00171
+  /cluster/ignore_induction True
+  /cluster/collection_time 2940
+  /gridcorr/gridcorrDBFlavor linear_expcorrections
+  /lifecalib/manual 4500
+  /apdposcorr/file database
+  /apdposcorr/flavor vanilla-base64
+  /apdposcorr/skipCorr false
+  /toutput/writeSignals false
+  /toutput/onlyUWires false
+  /toutput/trimWFs false
+  /toutput/onlyDNNEvents false
+  
+  maxevents 100000
+  printmodulo 1
+  /toutput/file ./recon_6230-002_real.root
+  begin
